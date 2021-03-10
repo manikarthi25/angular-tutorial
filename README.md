@@ -31,3 +31,5 @@ Commands:
 6. ng serve
 7. ng -v
 8. ng generate component new-component-name
+9. if ng command is not workinf, run the following commabd 
+10. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
