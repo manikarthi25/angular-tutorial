@@ -29,3 +29,5 @@ Commands:
 4. ng new project-name
 5. cd project-name
 6. ng serve
+7. ng -v
+8. ng generate component new-component-name
