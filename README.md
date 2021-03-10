@@ -22,6 +22,9 @@ Google + Microsoft
 3. Angular CLI
 4. Test Editor like VS Code
 
+# Path setting
+C:\Users\admin\AppData\Roaming\npm
+
 Commands:
 1. node -v
 2. npm -v
