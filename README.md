@@ -25,7 +25,7 @@ Google + Microsoft
 # Path setting
 C:\Users\admin\AppData\Roaming\npm
 
-Commands:
+#Commands:
 1. node -v
 2. npm -v
 3. npm install -g @angular/cli
@@ -36,3 +36,4 @@ Commands:
 8. ng generate component new-component-name
 9. if ng command is not workinf, run the following commabd 
 10. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+11. ng analytics project off
