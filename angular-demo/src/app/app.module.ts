@@ -7,6 +7,7 @@ import { TestComponent } from './test/test.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
+import { StyleBindingComponent } from './style-binding/style-binding.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ClassBindingComponent } from './class-binding/class-binding.component';
     TestComponent,
     InterpolationComponent,
     PropertyBindingComponent,
-    ClassBindingComponent
+    ClassBindingComponent,
+    StyleBindingComponent
   ],
   imports: [
     BrowserModule,

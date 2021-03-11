@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
             <h1>Class Binding Example</h1> 
             <h3 class = "text-success">Welcome Mani</h3>
             <h3 [class.text-danger] = "hasError">Welcome Mani</h3>
-            <h3 class = "text-special" [class] = "isSuccess">Overrite css property by class propert</h3>
+            <h3 class = "text-special" [class] = "isSuccess">Overrite css property by class property</h3>
             <h3 [ngClass] = "messageClasses">More than one class binding</h3>
             `,
   styles: [`
