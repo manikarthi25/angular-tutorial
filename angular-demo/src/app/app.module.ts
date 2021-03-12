@@ -11,6 +11,7 @@ import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwowayBindingComponent } from './twoway-binding/twoway-binding.component';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TwowayBindingComponent } from './twoway-binding/twoway-binding.componen
     ClassBindingComponent,
     StyleBindingComponent,
     EventBindingComponent,
-    TwowayBindingComponent
+    TwowayBindingComponent,
+    StructuralDirectivesComponent
   ],
   imports: [
     BrowserModule,
