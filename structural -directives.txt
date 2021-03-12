@@ -1,0 +1,4 @@
+Structural Directives - Add or Remove HTML elements from DOM
+a. ngIf - HTML element render based on condition
+b. ngSwitch - HTML element render based on condition
+c. ngFor - render List of HTML elements
