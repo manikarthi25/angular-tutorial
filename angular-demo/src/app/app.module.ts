@@ -15,6 +15,9 @@ import { StructuralDirectivesComponent } from './structural-directives/structura
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeService } from './employee-service.service';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,16 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
     StructuralDirectivesComponent,
     ChildComponent,
     ParentComponent,
-    PipeDemoComponent
+    PipeDemoComponent,
+    EmployeeComponent,
+    EmployeeListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

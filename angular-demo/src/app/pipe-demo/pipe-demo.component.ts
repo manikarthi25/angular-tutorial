@@ -52,8 +52,7 @@ export class PipeDemoComponent implements OnInit {
     {"name":"mani", "age":35},
     {"name":"Mohith", "age":25},
     {"name":"Raj", "age":15}
-  ]
-  
+  ]; 
 
   constructor() { }
 
