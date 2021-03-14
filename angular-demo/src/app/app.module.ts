@@ -14,6 +14,7 @@ import { TwowayBindingComponent } from './twoway-binding/twoway-binding.componen
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ParentComponent } from './parent/parent.component';
     TwowayBindingComponent,
     StructuralDirectivesComponent,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    PipeDemoComponent
   ],
   imports: [
     BrowserModule,
