@@ -37,3 +37,4 @@ C:\Users\admin\AppData\Roaming\npm
 9. if ng command is not workinf, run the following commabd 
 10. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 11. ng analytics project off
+12. ng g s EmployeeService
