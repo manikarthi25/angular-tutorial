@@ -1,0 +1,6 @@
+
+<div>
+    <p>Component Interaction between Parent Compent and Child Component!</p>
+    <h3>{{message}}</h3>
+</div>
+<app-child  (childEvent) = "message = $event" [parentData] = "name"></app-child>
