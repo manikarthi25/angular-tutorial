@@ -1,4 +1,17 @@
 # angular-tutorial
+# Angular 6.0.0
+Synchronize the major version number of
+1. Angular Framework
+2. Angular CLI
+3. Angular Material + CDK
+
+1. animation related code import from <- @angular/core - before angular 6
+2. animation related code import from <- @angular/animation - in angular 6
+3. removed <template> tag - we use in angular <ng-template>tage
+
+Service Class
+in Angular 
+
 # History
 2010 - Angular Js,
 2016 - Angular Version 2
