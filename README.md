@@ -1,4 +1,18 @@
 # angular-tutorial
+# Angular 8 - Release may 8(Update Angular Framework, CLI and material)
+1. Differential Loading - Aiutomatically make your angular apps more performs
+2. Two Bundles are created - a. One bundle for ES6(Support new browser) b. another bundle for ES5(Support old browser)
+3. Bundles size are reduced 7% to 20% based on modern java script features
+4. Dynamic load for lazy loads
+5. IVV -Rendering Engine - Translating template and component into HTML and jvav script that the brpwser can iunderstand (Still not a stable this feature)
+6. ng new project name --enable-ivy
+7. Bazel - Build tool - enable in next release
+# Breaking Changes in angular 8
+1. Should be used Typescript version 3.4
+2. Node version 12 and above
+3. Deprecated HttpModule and Http Service, we use HttpClientModule and HttpService
+
+
 # Angular 6.0.0
 Synchronize the major version number of
 # 1. Angular Framework
