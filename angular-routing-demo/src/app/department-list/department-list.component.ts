@@ -32,7 +32,7 @@ export class DepartmentListComponent implements OnInit {
   }
 
   onSelect(department : any) {
-      this.router.navigate(["/department", department.id]);
+      this.router.navigate(["/departments", department.id]);
   }
 
 }
