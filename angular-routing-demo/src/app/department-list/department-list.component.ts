@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-department-list',
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
       department-list works!
     </p>
     <ul class="items">
-          <li (click) = "onSelect(department)" *ngFor = "let department of departments"> 
+          <li (click) = "onSelect(department)" [class.selected]="isSelected(department)" *ngFor = "let department of departments"> 
               <span class="badge">{{department.id}}</span> {{department.name}}
           </li>
     </ul>
@@ -18,6 +18,8 @@ import { Router } from '@angular/router';
 })
 export class DepartmentListComponent implements OnInit {
 
+  public selectedId: any;  
+
   public departments = [
     { "id": 1, name:'CSE' },
     { "id": 2, name:'EEE' },
@@ -26,13 +28,21 @@ export class DepartmentListComponent implements OnInit {
     { "id": 5, name:'CIVIL' }
   ]
 
-  constructor(private router : Router) { }
+  constructor(private router : Router, private route : ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      let id = parseInt(params.get('id') || '0');
+      this.selectedId = id;
+   });
   }
 
   onSelect(department : any) {
       this.router.navigate(["/departments", department.id]);
+  }
+
+  isSelected(department : any) {
+    return department.id === this.selectedId;
   }
 
 }
