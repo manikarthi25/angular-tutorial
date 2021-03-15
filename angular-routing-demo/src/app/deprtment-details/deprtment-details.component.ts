@@ -5,9 +5,11 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
   selector: 'app-deprtment-details',
   template: `
               <h3>Department id is - {{departmentId}}  </h3>
-              <a (click) = "onPrevious()">Previous</a>
-              <a (click) = "onNext()">Next</a>
+              <div class="items">
+              <span class="badge"> <a (click) = "onPrevious()">Previous</a></span>
+              <span class="badge"><a (click) = "onNext()">Next</a></span>
               <button (click) = "goToDeprtments()">Back</button>
+              </div>
             `,
   styles: [
   ]
