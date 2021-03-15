@@ -1,16 +1,34 @@
 # angular-tutorial
 # Angular 6.0.0
 Synchronize the major version number of
-1. Angular Framework
-2. Angular CLI
-3. Angular Material + CDK
+# 1. Angular Framework
 
 1. animation related code import from <- @angular/core - before angular 6
 2. animation related code import from <- @angular/animation - in angular 6
 3. removed <template> tag - we use in angular <ng-template>tage
+4 Service Class - > define service class in providers in app.module and give Injectable() in service class - Angular 5
+                 - > remove service class in providers in app.module and give Injectable({providedIn:'root'}) in service class - Angular 6
+5. ngModelChange
 
-Service Class
-in Angular 
+# 2. Angular CLI
+1. ng update<package>
+2. ng add @anggular/material and add new capability
+3. Its support multiple project within single page
+
+# 3. Angular Material + CDK
+1. ng generate @angular/material:material-nav --name=my-nav ----->generate new navication menu page
+2. ng generate @angular/material:material-dashboard --name=my-dashboard ----->generate new dashboard
+3. ng generate @angular/material:material-table --name=my-table ----->generate new table with apgination
+
+# Angular 5 to Angular 6 Steps
+update.angular.io
+1. install latest version node js
+2. npm install -g @angular/cli
+3. npm install @angular/cli
+4. npm update @angular/cli
+5. npm update @angular/code
+6. npm update @angular/material
+
 
 # History
 2010 - Angular Js,
