@@ -12,6 +12,11 @@
 2. Node version 12 and above
 3. Deprecated HttpModule and Http Service, we use HttpClientModule and HttpService
 
+# update angular cli
+1. npm uninstall -g @angular/cli
+2. npm cache verify
+3. npm install -g @angular/cli@latest
+
 
 # Angular 6.0.0
 Synchronize the major version number of
