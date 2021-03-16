@@ -1,7 +1,7 @@
 
 <div class="container-fluid mb-5">
   <h1>Enrollment Form</h1>
-  <form #userForm = "ngForm">
+  <form #userForm = "ngForm" *ngIf = "!isSubmitted" (ngSubmit) = "onSubmit()" novalidate>
 
     <div> {{ userForm.value | json}} </div>
    
