@@ -9,13 +9,17 @@
 
     <div class="form-group">
       <label>Name</label>
-      <input type="text"  name = "name" class="form-control" [(ngModel)] = "userModel.name">
+      <input type="text" required #name  name = "name" class="form-control" [(ngModel)] = "userModel.name">
     </div>
+
+    {{name.className}} <!-- class-->
 
     <div class="form-group">
       <label>Email</label>
-      <input type="email" name = "email" class="form-control" [(ngModel)] = "userModel.email"> 
+      <input type="email" required #email = "ngModel" name = "email" class="form-control" [(ngModel)] = "userModel.email"> 
     </div>
+
+    {{email.untouched}} <!-- property-->
 
     <div class="form-group">
       <label>Phone</label>
