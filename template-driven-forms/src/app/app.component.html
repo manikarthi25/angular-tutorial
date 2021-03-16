@@ -9,10 +9,10 @@
 
     <div class="form-group">
       <label>Name</label>
-      <input type="text" required #name  name = "name" class="form-control" [(ngModel)] = "userModel.name">
+      <input type="text" required #name = "ngModel" [class.is-invalid] = "name.invalid && name.touched" name = "name" class="form-control" [(ngModel)] = "userModel.name">
     </div>
 
-    {{name.className}} <!-- class-->
+    <!--{{name.className}} -> class-->
 
     <div class="form-group">
       <label>Email</label>
@@ -23,7 +23,7 @@
 
     <div class="form-group">
       <label>Phone</label>
-      <input type="tel" name = "phone" class="form-control" [(ngModel)] = "userModel.phone">
+      <input type="tel" name = "phone" #phone = "ngModel" pattern="^\d{10}$" [class.is-invalid] = "phone.invalid && phone.touched"  class="form-control" [(ngModel)] = "userModel.phone">
     </div>
 <!--
     <div ngModelGroup = "address">
