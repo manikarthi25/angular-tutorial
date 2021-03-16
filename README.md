@@ -17,6 +17,30 @@
 2. npm cache verify
 3. npm install -g @angular/cli@latest
 
+# Create Express Server
+1. create folder outside the project(Server)
+2. Right click on new(server) folder - open in command prompt
+3. npm init --yes
+4. npm install --save express body-parser cors 
+5. express - webserver, body-parser - middleware to handle the data, cors - run application on different port
+
+# Express Server Code - server.js(create new file)
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const PORT = 3000;
+const app = express();
+app.use(bodyParser.json());
+app.use(cors());
+app.get('/', function(req, res) {
+   res.send("Hellow! Express Server");
+});
+app.listen(PORT, function() {
+   console.log("Server is running on PORT number : ", PORT)
+});
+
+-> run node server
+- run localhost:3000
 
 # Angular 6.0.0
 Synchronize the major version number of
