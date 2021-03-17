@@ -1,4 +1,4 @@
-Attribute VS Property
+# Attribute VS Property
 
 1. Both are not same
 2. Attribute is defined by HTML
@@ -7,6 +7,7 @@ Attribute VS Property
 5. Attribute values can not change once they are initialized
 6. Property values can be change
 
+# Exmaple
 $0.getAttribute('value') -> Mani
 $0.value -> Mani
 After change value from Mani to Karthi
