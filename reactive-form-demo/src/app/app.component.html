@@ -6,7 +6,13 @@
 
     <div class = 'form-group'>
       <label>User Name</label>
-      <input formControlName = 'userName' type = "text" class = 'form-control'>
+      <input [class.is-invalid] = "userName.invalid && userName.touched" formControlName = 'userName' type = "text" class = 'form-control'>
+      <!--<small class="text-danger" [class.d-none] = "registerationForm.get('userName').valid || registerationForm.get('userName').untouched">User Name is required</small>-->
+      <div *ngIf = "userName.invalid && userName.touched">
+        <small class="text-danger" *ngIf = "userName.errors?.required">User Name is required</small>
+        <small class="text-danger" *ngIf = "userName.errors?.minlength"> User Name must be minimum 3 characters</small>
+       </div>
+      <!-- <input [class.is-invalid] = "registerationForm.get('userName').invalid && registerationForm.get('userName').touched" formControlName = 'userName' type = "text" class = 'form-control'>-->
     </div>
 
     <div class = 'form-group'>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms'
+//import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,24 @@ import { FormControl, FormGroup } from '@angular/forms'
 })
 export class AppComponent {
 
-  registerationForm = new FormGroup({
+  constructor(private formBuilder : FormBuilder) {}
+
+  get userName() {
+      return this.registerationForm.get('userName');
+  }
+
+  registerationForm = this.formBuilder.group({
+    userName : ['', [Validators.required, Validators.minLength(3)]],
+    password : [''],
+    confirmPassword : [''],
+    address : this.formBuilder.group({
+       city : [''],
+       state : [''],
+       pincode : ['']
+    })
+  })
+
+  /*registerationForm = new FormGroup({
     userName : new FormControl('Mani'),
     password : new FormControl(''),
     confirmPassword : new FormControl(''),
@@ -17,7 +35,7 @@ export class AppComponent {
        state : new FormControl(''),
        pincode : new FormControl('')
     })
-  }); 
+  }); */
 
   loadAPIData() {
     this.registerationForm.setValue({
