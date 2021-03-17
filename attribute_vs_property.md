@@ -8,8 +8,8 @@
 6. Property values can be change
 
 # Exmaple
-$0.getAttribute('value') -> Mani
-$0.value -> Mani
-After change value from Mani to Karthi
-$0.getAttribute('value') -> Mani
-$0.value -> Karthi
+1. $0.getAttribute('value') -> Mani
+2. $0.value -> Mani
+3. After change value from Mani to Karthi
+4. $0.getAttribute('value') -> Mani
+5. $0.value -> Karthi
