@@ -10,6 +10,7 @@ import { User } from './user';
 export class AppComponent {
   topics = ['Angular', "React", "Vue"];
   topicHasError = true;
+  errorMessage ='';
 
   isSubmitted = false;
 
@@ -31,7 +32,7 @@ export class AppComponent {
     this.entrollmentService.enrollUser(this.userModel)
     .subscribe(
       data => console.log("Success!", data),
-      error => console.log("Error!", error)
+      error => this.errorMessage = error
     );
   }
 }
