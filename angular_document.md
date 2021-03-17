@@ -1,4 +1,4 @@
-Angular Architecture
+# Angular Architecture
 Angular App - One or More Modules
 Module - One or More Components + Services
 Service - Write business logic
