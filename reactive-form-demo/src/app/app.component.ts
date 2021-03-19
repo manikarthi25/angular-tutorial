@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 //import { FormControl, FormGroup } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms'
+import { passwordValidator } from './Custom-Validators/password-validators';
+import { forbiddenNameValidator } from './Custom-Validators/user-name-validator';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +18,7 @@ export class AppComponent {
   }
 
   registerationForm = this.formBuilder.group({
-    userName : ['', [Validators.required, Validators.minLength(3)]],
+    userName : ['', [Validators.required, Validators.minLength(3), forbiddenNameValidator]],
     password : [''],
     confirmPassword : [''],
     address : this.formBuilder.group({
@@ -24,7 +26,7 @@ export class AppComponent {
        state : [''],
        pincode : ['']
     })
-  })
+  }, {validator: passwordValidator})
 
   /*registerationForm = new FormGroup({
     userName : new FormControl('Mani'),
