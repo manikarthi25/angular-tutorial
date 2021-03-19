@@ -1,6 +1,6 @@
 <div class = "container-fluid">
   <h1>User Registeration</h1>
-  <form [formGroup] = 'registerationForm'>
+  <form [formGroup] = 'registerationForm' (ngSubmit) = "onSubmit()">
     
     <div> {{ registerationForm.value | json }}</div>
 
@@ -27,6 +27,19 @@
       <small class = "text-danger" *ngIf = "registerationForm.errors?.misMatch">Password do not match</small>
     </div>
 
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" [class.is-invalid] = "email.invalid && email.touched" formControlName = "email" class="form-control"> 
+      <small class="text-danger" *ngIf = "email.errors?.required"> Email is required </small>
+    </div>
+
+    <div class="form-check mb-3">
+      <div class="form-group">
+        <input type="checkbox" formControlName = "subscribe" class="form-check-input">
+        <label class="form-check-label" value="label"> send me promotional offers</label>
+      </div>
+    </div>
+
     <div formGroupName = "address">
       <div class = 'form-group'>
         <label>City</label>
@@ -43,7 +56,7 @@
     </div>
 
     <div class = 'form-group'>
-      <button class = "btn btn-primary" type = "submit">Register</button>
+      <button [disabled] = "!registerationForm.valid" class = "btn btn-primary" type = "submit">Register</button>
     </div>
 
     <div class = 'form-group'>
